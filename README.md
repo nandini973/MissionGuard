@@ -1,65 +1,200 @@
-# MissionGuard AI
-### Human-in-the-Loop Space Operations Copilot
+# MissionGuard AI 🛰️
+
+### AI-Powered Mission Operations Copilot
+
+MissionGuard is a Human-in-the-Loop decision-support platform designed for satellite mission operations.
+
+Rather than simply displaying mission alerts, MissionGuard helps operators understand:
+
+* What happened
+* Why it matters
+* What happens if ignored
+* What should be done next
+
+MissionGuard assists operators with intelligent recommendations while ensuring that final mission authority always remains with human engineers.
 
 ---
 
-## Run in 5 minutes
+## FAR AWAY 2026 Submission
+
+**Theme:** Space Technology + Agentic AI
+
+MissionGuard demonstrates how AI-assisted decision support can improve mission awareness, alert prioritization, and operational planning for satellite missions.
+
+---
+
+## Features
+
+* Real satellite visualization
+* Communication window alerts
+* Conjunction risk alerts
+* Battery health alerts
+* Agent reasoning timeline
+* Mission impact assessment
+* Recommended actions
+* Human-in-the-Loop decision support
+
+---
+
+## System Architecture
+
+```text
+CelesTrak TLE Data
+        ↓
+Skyfield Orbit Propagation
+        ↓
+Alert Detection Engine
+(Communication | Conjunction | Battery)
+        ↓
+MissionGuard Decision Engine
+(Priority + Reasoning + Impact)
+        ↓
+MissionGuard Dashboard
+        ↓
+Human Operator
+(Review → Decide → Act)
+```
+
+---
+
+## Technology Stack
+
+### Frontend
+
+* React
+* Vite
+
+### Backend
+
+* FastAPI
+* Python
+
+### Space Data
+
+* CelesTrak
+
+### Orbit Propagation
+
+* Skyfield + SGP4
+
+---
+
+## Quick Start
 
 ### Terminal 1 — Backend
+
 ```bash
-cd backend
+cd Backend
 pip install -r requirements.txt
 python main.py
 ```
-Backend runs at: http://localhost:8000
+
+Backend runs at:
+
+```text
+http://localhost:8000
+```
+
+---
 
 ### Terminal 2 — Frontend
+
 ```bash
-cd frontend
+cd Frontend
 npm install
 npm run dev
 ```
-Frontend runs at: http://localhost:3000
+
+Frontend runs at:
+
+```text
+http://localhost:3000
+```
 
 ---
 
-## What you'll see
+## What You'll See
 
-- 🌍 3D Earth with real Indian satellite orbits (live TLE from CelesTrak)
-- 📡 3 active alerts: Comms Window / Conjunction / Battery
-- 🤖 Agent reasoning streaming live step by step
-- 📊 Mission Impact Panel: Current Risk / If Actioned / If Ignored
-- ⏱ Mission Timeline at the bottom
-
----
-
-## Demo script (4 minutes)
-
-**0:00** "This is MissionGuard. These are 5 real Indian satellites — CARTOSAT-3, EOS-04, RESOURCESAT-2A, OCEANSAT-3, RISAT — using live orbital data from CelesTrak right now."
-
-**0:30** Three alerts appear. "MissionGuard has detected 3 simultaneous alerts."
-
-**1:00** Click COMMUNICATION WINDOW alert. Agent reasoning streams. "Watch the agent reason through the consequences — not just 'priority high', but WHY."
-
-**2:00** Point to Mission Impact panel. "If actioned now: LOW risk. If ignored: CRITICAL. Next contact window lost for 8 hours 14 minutes."
-
-**2:30** Click CONJUNCTION alert. New reasoning streams. "Medium priority — needs planning review, but not right now."
-
-**3:00** Point to timeline. "MissionGuard tells engineers what to look at first, why it matters, and what happens if they don't."
-
-**3:30** "Most systems say: something happened. MissionGuard says: here's what to do first, and here's what you lose if you wait."
+*  3D Earth with real satellite orbital visualization
+*  Active mission alerts
+*  AI reasoning timeline
+*  Mission impact analysis
+*  Operational timeline
+*  Recommended actions
 
 ---
 
-## Verify with Heavens-Above (for judges)
-1. Open https://www.heavens-above.com
-2. Search CARTOSAT-3
-3. Compare position with dashboard
-4. Same coordinates = real data ✅
+## API Endpoints
+
+### Get Satellite Positions
+
+```http
+GET /satellites
+```
+
+Returns estimated satellite positions and orbital trajectories.
+
+### Get Mission Alerts
+
+```http
+GET /alerts
+```
+
+Returns prioritized alerts, reasoning, and mission impact assessment.
+
+### Refresh Orbital Data
+
+```http
+GET /refresh
+```
+
+Refreshes orbital data and recalculates positions.
 
 ---
 
-## API endpoints
-- GET /satellites — live TLE positions
-- GET /alerts — prioritized alerts with reasoning
-- GET /refresh — re-fetch TLE data
+## Human-in-the-Loop Safety
+
+### MissionGuard DOES NOT
+
+* Control satellites
+* Execute commands
+* Override operators
+* Make autonomous mission decisions
+
+### MissionGuard DOES
+
+* Prioritize alerts
+* Explain consequences
+* Recommend actions
+* Support operator decision-making
+
+---
+
+## Future Scope
+
+* AI Mission Copilot Chat
+* Predictive Risk Forecasting
+* Fleet-Wide Operations
+* Telemetry Integration
+* Multi-Satellite Decision Support
+
+---
+
+## Data Sources
+
+* CelesTrak — Satellite Orbital Data
+* Skyfield — Orbit Propagation Library
+
+---
+
+## Team Vision
+
+MissionGuard transforms mission monitoring into mission intelligence.
+
+Instead of asking:
+
+"What happened?"
+
+MissionGuard helps operators answer:
+
+"What happened, why does it matter, and what should happen next?"
