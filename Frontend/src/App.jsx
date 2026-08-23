@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Plot from "react-plotly.js";
+import ContinuityPanel from "./Continuitypanel.jsx";
 
 const API = "http://localhost:8000";
 
@@ -569,7 +570,7 @@ export default function App() {
       {/* Main grid */}
       <div style={{
         flex: 1, display: "grid",
-        gridTemplateColumns: "1.8fr 280px 320px",
+        gridTemplateColumns: "1.4fr 260px 300px 300px",
         gridTemplateRows: "1fr 120px",
         gap: 0, overflow: "hidden",
         borderTop: `1px solid ${COLOR.border}`,
@@ -676,6 +677,7 @@ export default function App() {
         {/* Right column — reasoning + impact */}
         <div style={{
           gridRow: "1 / 2", gridColumn: "3 / 4",
+          borderRight: `1px solid ${COLOR.border}`,
           display: "flex", flexDirection: "column",
           overflow: "hidden",
         }}>
@@ -696,9 +698,17 @@ export default function App() {
           )}
         </div>
 
+        {/* Mission Continuity — Round 2 panel */}
+        <div style={{
+          gridRow: "1 / 2", gridColumn: "4 / 5",
+          overflow: "hidden",
+        }}>
+          {selectedAlert && <ContinuityPanel alert={selectedAlert} />}
+        </div>
+
         {/* Timeline — bottom row */}
         <div style={{
-          gridRow: "2 / 3", gridColumn: "1 / 4",
+          gridRow: "2 / 3", gridColumn: "1 / 5",
           borderTop: `1px solid ${COLOR.border}`,
           background: COLOR.panel,
           padding: "12px 16px",
