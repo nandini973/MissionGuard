@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import Plot from "react-plotly.js";
 import ContinuityPanel from "./Continuitypanel.jsx";
 
-const API = "http://localhost:8000";
+const API = "https://missionguard-frontend.onrender.com";
 
 const COLOR = {
   bg: "#080D14",
