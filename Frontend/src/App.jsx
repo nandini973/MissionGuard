@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Plot from "react-plotly.js";
-import ContinuityPanel from "./Continuitypanel.jsx";
+import Continuitypanel from "./Continuitypanel.jsx";
 
 const API = "https://missionguard.onrender.com";
 
