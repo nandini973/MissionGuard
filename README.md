@@ -1,4 +1,4 @@
-LIVE DEMO - https://missionguard-frontend.onrender.com/
+LIVE DEMO - https://missionguard-frontend.onrender.com
 
 # MissionGuard AI 🛰️
 
