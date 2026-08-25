@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 
-const API = "http://localhost:8000";
+const API = "https://missionguard.onrender.com";
 
 const COLOR = {
   bg: "#080D14",
